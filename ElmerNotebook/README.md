@@ -1,8 +1,15 @@
-# NOTES!!!
+# Elmerfem: coupling FEM-circuit, handling via jupyter notebook
 
-FEM solver: Elmerfem (http://www.elmerfem.org/blog/) <br />
-Geometry builder and mesher: salome platform (https://www.salome-platform.org/) <br />
+## Pre-requisites
+
+- Jupyter and python 3.x
+- FEM solver: [Elmerfem](http://www.elmerfem.org/blog/)
+- Geometry builder and mesher: [salome platform](https://www.salome-platform.org/)
+- Result visualization with [paraview](https://www.paraview.org/)
+
 As 2022, tested with Elmerfem 9.0 and Salome 9.9.0 <br />
+
+## Bashmode or Jupyter
 
 To make the *.sh files executable: "chmod u+x *.sh" <br />
 1- Run the solver without log file: "bash run.sh" or "./run.sh" <br />
@@ -11,7 +18,7 @@ To make the *.sh files executable: "chmod u+x *.sh" <br />
 4- Compile the User Defined Functions (UDF) alone: ./compileUDF.sh <br />
 5- Run step 3 and 4 combined: "./main.sh" or "./main.sh logfilename"
 
-The case study can be opened in a jupyter notebook: `jupyter notebook elmerNotebook.ipynb` and run from there. You need to change some variables defining the location of `salome` and `gmsh` in your OS. Pre-requisites are a fully working python 3.x install, salome platform and gmsh.
+The case study can be opened in a jupyter notebook: `jupyter notebook elmerNotebook.ipynb` and run from there. You need to change some variables defining the location of `salome` and `gmsh` in your OS.
 
 # Electromagnetic model: coil connected to an external electrical circuit
 
