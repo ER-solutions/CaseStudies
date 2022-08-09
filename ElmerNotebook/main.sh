@@ -65,10 +65,7 @@ cd ..
 echo " "
 echo "*** ELMERSOLVER ***"
 echo "*** Cleaning past results" | tee $LOGFILE
-rm -v ./RESU/coil_* | tee -a $LOGFILE
+rm -v ./RESU/case* | tee -a $LOGFILE
 echo "*** Run the coil powering: coil-energization.sif" | tee $LOGFILE
-ElmerSolver coil-energization.sif | tee -a $LOGFILE
+ElmerSolver case.sif | tee -a $LOGFILE
 #mpirun -np 4 coil-energization.sif | tee -a $LOGFILE
-echo "Run the coil extraction: coil-extraction.sif" | tee -a $LOGFILE
-ElmerSolver coil-extraction.sif | tee -a $LOGFILE
-#mpirun -np 4 coil-extraction.sif | tee -a $LOGFILE
