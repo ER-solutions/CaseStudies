@@ -186,6 +186,8 @@ Solver 3  !---- MagnetoDynamics, WhitneyAVSolver: A-V solver
    Variable = "A"
    Procedure = "MagnetoDynamics" "WhitneyAVSolver"
 
+   Fix Input Current Density = False
+
    Nonlinear Pre Solvers(1) = 2 ! run the circuit solver iteratively
    Post Solvers(1) = 4 ! postprocess the circuit outputs
 
@@ -207,6 +209,8 @@ Solver 3  !---- MagnetoDynamics, WhitneyAVSolver: A-V solver
    Linear System Convergence Tolerance = 1.0e-6 ! add to drop the tolerance
    Linear System Max Iterations = 3000
    Linear System Residual Output = 20
+  
+   Linear System Robust = True
 End
 
 Solver 4  !---- MagnetoAndDynamics, MagnetoDynamicsCalcFields: filed computation from A-V solver
@@ -226,7 +230,6 @@ Solver 4  !---- MagnetoAndDynamics, MagnetoDynamicsCalcFields: filed computation
   Linear System Preconditioning = ILU0
   Linear System ILUT Tolerance = 1.0e-6
   Linear System Abort Not Converged = False
-  Linear System Residual Output = 1
   Linear System Precondition Recompute = 1
   Linear System Residual Output = 10
 
@@ -245,6 +248,10 @@ Solver 5  !---- ResultOuputSolve, ResultOuputSolver
    Binary Output = Logical True
 
    Output File Name = File "case"
+
+! This makes it easier to pick any given piece
+   Vtu Part Collection = True
+   Save Bulk Only = True
 
    Save Geometry Ids = Logical True
 End
