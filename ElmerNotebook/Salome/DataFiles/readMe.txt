@@ -3,7 +3,7 @@
 ********************
 
 *** AUTHOR: Frederic Trillaud
-*** DATE: 2022-08-09
+*** DATE: 2022-08-10
 
 *** Solids ***
 coil1, material: SC

@@ -127,14 +127,12 @@ Initial Condition 1
   Name = "Initial state"
   A {e} = Real 0.0
   A = Real 0.0
-  Jfix = Real 0.0
 End
 
 Boundary Condition 1
   Name = "Air boundary"
   Target Boundaries(1) = $ airBoundary
   A {e} = real 0
-  Jfix = Real 0.0
 End
 
 
